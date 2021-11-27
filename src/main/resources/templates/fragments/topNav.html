@@ -18,10 +18,10 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
      
     </form>
-     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
   </div>
  	
  	 <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -30,10 +30,11 @@
 						<img class="img-fluid" th:src="@{/img/undraw_profile.jpg}" style="width:50px;"/>
 					</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><a class="dropdown-item" href="#!">Meu Perfil</a></li>
+                        <li><a class="dropdown-item" th:href="@{listagem}">Meu Consumo</a></li>
+                        <li><a class="dropdown-item" th:href="@{negociacao}">Negociação</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><a class="dropdown-item" href="#!">Sair</a></li>
                     </ul>
                 </li>
             </ul>
