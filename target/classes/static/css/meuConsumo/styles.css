@@ -1,0 +1,25 @@
+*{
+	
+	border-color: #AFDBFF!important;
+	
+	color: #6c6c6c;
+}
+
+.class {
+	margin-bottom: 20px!important;
+	
+}
+
+
+h5{color:#6c6c6c!important;}
+
+.btn-card ,.accordion-button{
+	
+	background-color: #D6E8F6;
+	color: #637DD9;
+}
+.accordion-button:not(.collapsed){
+	background-color:#637DD9;
+	color:white;
+}
+h3{color: #637DD9;}
