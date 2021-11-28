@@ -1,0 +1,31 @@
+
+/*! Meu estilo pessoal para trabalhar com whatsapp */
+.masthead{
+  padding-top:130px!important;
+}
+
+.menuEstilizado{
+  background-color: #a069a3!important;
+}
+
+#iconwhatsapp{
+    position: fixed;
+    bottom: 2%;
+    right:  1%;
+    padding: 10px;
+    z-index: 10000000;
+    
+}
+#popover240319{
+    position: fixed;
+    bottom: 8%;
+    right:  1%;
+    margin: 10px;
+    left:initial;
+    top:initial;
+    z-index: 10000000;
+  
+}
+.content{
+	min-height:77vh;
+}
