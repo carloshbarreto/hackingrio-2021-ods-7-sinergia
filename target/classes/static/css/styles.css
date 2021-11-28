@@ -11703,7 +11703,9 @@ body {
 
 
 
-
+.content{
+	min-height:77vh;
+}
 
 
 
