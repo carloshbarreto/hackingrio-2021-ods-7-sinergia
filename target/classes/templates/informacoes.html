@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Informações</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link th:href="@{css/styles.css}" rel="stylesheet" />
+    	<link th:href="@{css/myStyles.css}" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+    
+    <!-- Navbar -->
+	<th:block th:insert="fragments/topNav.html :: topbar"></th:block>
+	<!-- /.navbar -->
+
+       
+       
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Informações</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Informações</li>
+                        </ol>
+                        <div >
+                            <p>Nesta sessão reunimos algumas informações que esclarecem sobre energias limpas, renováveis e trazemos também informações sobre a tarifa branca. Se você nunca ouviu falar sobre nada disso, não se preocupe, separamos dois vídeos que vão te deixar a par do assunto.</p>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-video me-1"></i>
+                                <b>Energia limpa</b>
+                            </div>
+                            <div class="card-body">  
+                                <p>Já conhece sobre energia limpa e sustentável? No vídeo abaixo você fica sabendo sobre o que é. Assista!</p>                              
+                                <div class="embed-container">   
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MYvpH_1rAkw" title="YouTube video player" 
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>                             
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-video me-1"></i>
+                                <b>Tarifa branca</b>
+                            </div>
+                            <div class="card-body">  
+                                <p>Você já ouviu falar sobre tarifa branca? Sabia que você pode economizar na conta de energia? Conheça o seu perfil de consumo! Saiba mais assistindo ao vídeo abaixo.</p>                              
+                               <div class="embed-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bktJvstA3ck" 
+                                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                                    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                             
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <!-- Footer -->
+			<th:block th:insert="fragments/footer.html :: footer"></th:block>
+			<!-- /.footer -->
+            
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script th:src="@{js/scripts.js}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script th:src="@{js/datatables-simple-demo.js}"></script>
+    </body>
+</html>
