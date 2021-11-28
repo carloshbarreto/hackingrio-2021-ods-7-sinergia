@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org"
-	xmlns:sec="http://www.w3.org/1999/xhtml">
+<html lang="pt-br" xmlns:th="http://www.springframework.org/schema/data/jaxb">
 
 <head>
     <meta charset="utf-8" />
@@ -24,46 +22,51 @@
 	<!-- /.navbar -->
 
             <main>
+           		 
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Cadastro do consumo</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                
+                <nav aria-label="breadcrumb" style="margin-top: 30px;">
+           			 <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item"><a th:href="@{home}">Página Inicial</a></li>
                         <li class="breadcrumb-item active">cadastro do consumo</li>
                     </ol>
+                   </nav>
                    
-                    <div class="row">
-                        <div class="card col-sm-6">
-                            <div class="card-header">
+                    <h1 class="mt-4">Cadastro do consumo</h1>
+                    
+                   
+                    <div class="row justify-content-center">
+                        <div class="card col-sm-5">
+                            <div class="card-header w-auto">
                                 <b>Leitura feita por você</b>
                             </div>
+                            
                             <!--INÍCIO DO CARD DE LEITURA DO CONSUMO FEITO PELO CONSUMIDOR-->
-
+						
                             <div class="card-body">
                                 <p>Informe a leitura do seu medidor de energia</p>
-                                <img th:src="@{img/MedidorPonteiros.jpg}" />
+                                <img class="minhaimagem" th:src="@{img/MedidorPonteiros.jpg}" />
                                 <!--Input do Valor de leitura que você mesmo fez do relógio -->
                                 <div class="form-group col-md-4">
-                                    <input class="form-control col-sm-2" type="text" placeholder="0859" />
+                                    <input class="form-control" type="text" placeholder="0859" />
                                     <button class="botao" type="submit">Cadastrar</button>
                                 </div>
                             </div>
+						
                             <div class="card-body">
-                                <p>Informe a data que você fez a leitua</p>
+                                <p>Informe a data que você fez a leitura</p>
 
                                 <!--Input da Data de leitura que você mesmo fez do relógio -->
 
                                 <div class="row">
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group col-md-5">
 
-                                        <input class="form-control col-md-6" type="text" placeholder="00/00/2000" />
+                                        <input class="form-control" type="date"/>
                                     </div>
 
 
 
-                                    <div class="form-group col-md-3">
-                                        <img class="calendario" th:src="@{img/calendario.png}" />
-                                        <!-- <i class="fa fa-calendar"></i>-->
-                                    </div>
+                                    
                                 </div>
                                 <div class="form-group col-md-3">
                                     <button class="botao" type="submit">Cadastrar</button>
@@ -72,10 +75,12 @@
 
                             </div>
                         </div>
+                        
+                        <!-- FIM DO CARD DE LEITURA FEITA PELO CONSUMIDOR -->
 
                         <!--INÍCIO DO CARD DE LEITURA DO CONSUMO FEITO PELA EMPRESA-->
 
-                        <div class="card col-sm-6">
+                        <div class="card col-sm-5 ms-4">
                             <div class="card-header">
                                 <b>Leitura feita pelo profissional
                                     da empresa de energia </b>
@@ -89,23 +94,22 @@
 
                                     <!--Input do Valor de leitura que está na conta de energia -->
                                     <div class="form-group col-md-4">
-                                        <input class="form-control col-sm-2" type="text" placeholder="0859" />
+                                        <input class="form-control" type="text" placeholder="0859" />
                                         <button class="botao" type="submit">Cadastrar</button>
                                     </div>
                                     <!--Input da Data de leitura que você mesmo fez do relógio -->
 
                                     <div class="row">
-                                        <div class="form-group col-md-4">
+                                    <p class="mt-4">Informe  a data da última leitura que está na conta</p>
+                                        <div class="form-group col-md-5">
+                                        
 
-                                            <input class="form-control col-md-6" type="text" placeholder="00/00/2000" />
+                                            <input class="form-control" type="date" />
                                         </div>
 
 
 
-                                        <div class="form-group col-md-3">
-                                            <img class="calendario" th:src="@{img/calendario.png}" />
-                                            <!-- <i class="fa fa-calendar"></i>-->
-                                        </div>
+                                        
                                     </div>
                                     <div class="form-group col-md-3">
                                         <button class="botao" type="submit">Cadastrar</button>
@@ -115,20 +119,38 @@
                             </div>                            
                         </div>                        
                     </div>
-                    <!--INÍCIO DO CARD DE LEITURA DO CONSUMO FEITO PELA EMPRESA-->
+                    <!--INÍCIO DO CARD De SAÍDA DE DADOS-->
 
-                    <div class="card col-sm-12">
+                    <div class="card col-sm-8 mx-auto mt-4">
                         <div class="card-header">
                             <b>O seu consumo no período </b>
                         </div>
                         <div class="card-body">
 
                             <div class="card-body">
-                                <p>No período de:</p>
+                               
                                 
-                                <p>Você consumiu:</p>
-
-                                <p>Seu gasto atual em R$ está em:</p>
+                                <div class="row">                                
+                                	<div class="col-6">
+                                	<p>No período de:</p> 
+                                	<input class="form-control" id="inputRead" type="text" value="dd/mm/aaaa" aria-label="Disabled input example" disabled readonly>
+                                	<p class="ms-5">a</p> 
+                                	<input class="form-control" id="inputRead" type="text" value="dd/mm/aaaa" aria-label="Disabled input example" disabled readonly>
+                                	</div>
+                                	 
+                                	<div class="col-6">
+									<p>Você consumiu:</p>
+									<div class="row">
+									<input class="form-control col-6" id="inputRead" type="text" value="73" aria-label="Disabled input example" disabled readonly>
+									<p class="col-6 my-auto"><b>KWh</b></p>
+									</div>
+                               		 <p>Seu gasto atual em R$ está em:</p>     
+                               		 <div class="row">                          		 
+                               		 <input class="form-control" id="inputRead" type="text" value="61,14" aria-label="Disabled input example" disabled readonly>
+									<p class="col-6 my-auto"><b>R$</b></p>
+									</div>
+									</div>
+                                </div>
                                 
 
                                 
