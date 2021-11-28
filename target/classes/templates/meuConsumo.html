@@ -16,7 +16,7 @@
 
 
   <!-- Navbar -->
-  <th:block th:insert="fragments/topNav.html :: topbar"></th:block>
+  <th:block th:insert="fragments/topNav2.html :: topbar"></th:block>
   <!-- /.navbar -->
         
         <div class="content w-75 mx-auto">
@@ -462,11 +462,18 @@
                                        
                                     </tbody>
                                 </table>
+                                
+                                
+                                
+                                				<p th:href="@{meuconsumo}">Ainda com medidor analógico? Cadastre seu consumo à mão agora para maiores informações.</p>
 						      </div>
 						    </div>
 						  </div>
 						</div>                        
 					</div>
+					
+					
+					<a th:href="@{meuconsumo}" class="text-center"><p  class="container-fluid px-4 mt-3 text-primary">Ainda com medidor analógico? Cadastre seu consumo à mão agora para maiores informações.</p></a>
             
                         
                     <div class="container-fluid px-4">  
@@ -477,7 +484,7 @@
 				<!--		    <h5 class="card-title">Medidor inteligente</h5>-->
 						    <div class="row">
 						    <p class="card-text col-10">Porque não aderir a Tarifa Branca agora mesmo e diminuir o valor da sua conta?</p>
-						    <button  class="btn btn-sm btn-card col-2" >Saiba Mais...</button>
+						    <button  class="btn btn-sm btn-card col-2" th:href="@{informacoes}" >Saiba Mais...</button>
 						        </div>
 						  </div>
 						</div>
@@ -488,7 +495,7 @@
 			<!--			    <h5 class="card-title">Energia mais barata e limpa</h5>-->
 						     <div class="row">
 						    <p class="card-text col-10">Porque não contribuir com o meio ambiente, comprando energia mais barata e limpa?</p>
-						    <button  class="btn btn-sm btn-card col-2" >Saiba Mais...</button>
+						    <button  class="btn btn-sm btn-card col-2" th:href="@{informacoes}">Saiba Mais...</button>
 						    </div>
 						  </div>
 						</div>
@@ -500,7 +507,7 @@
 				<!--		    <h5 class="card-title">Equipamentos eletrônicos</h5>-->
 						     <div class="row">
 						    <p class="card-text col-10">Vamos usar as maquinas de lavar no horário onde o custo da energia é mais barata?</p>
-						    <button  class="btn btn-sm btn-card col-2" >Saiba Mais...</button>
+						    <button  class="btn btn-sm btn-card col-2" th:href="@{informacoes}">Saiba Mais...</button>
 						    </div>
 						  </div>
 						</div>
@@ -511,7 +518,7 @@
 						  <!--  <h5 class="card-title ">Negociar com a Distribuidora</h5>-->
 						    <div class="row">
 						    <p class="card-text col-10">Simule já! Quanto será que custa seu tempo de banho ou seu tempo de arcondicionado ligado?</p>
-						    <button  class="btn btn-sm btn-card col-2">Saiba Mais...</button>
+						    <button  class="btn btn-sm btn-card col-2" th:href="@{informacoes}">Saiba Mais...</button>
 						    </div>
 						  </div>
 						</div>

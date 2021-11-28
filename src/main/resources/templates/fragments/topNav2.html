@@ -1,6 +1,7 @@
 <div th:fragment="topbar" xmlns:th="http://www.w3.org/1999/xhtml">
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand col-6" href="#"><img class="img-fluid" th:src="@{/img/Logoctrlenergy.png}" style="width:300px;padding-left:40px;"/></a>
+  <a class="navbar-brand col-6" href="#" th:href="@{/home}"><img class="img-fluid" th:src="@{/img/Logoctrlenergy.png}" style="width:300px;padding-left:40px;"/></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -34,7 +35,7 @@
                         <li><a class="dropdown-item" th:href="@{listagem}">Meu Consumo</a></li>
                         <li><a class="dropdown-item" th:href="@{negociacao}">Negociação</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Sair</a></li>
+                        <li><a class="dropdown-item" th:href="@{/home}">Sair</a></li>
                     </ul>
                 </li>
             </ul>
