@@ -45,14 +45,14 @@
 				style="margin-top: 92px;">
 				<div class="">
 					<h5 style="font-size:16px;">Para continuar, precisaremos de alguns Dados para Cadastro</h5>
-					<form action="" autocomplete="off" id="fcadastro" style="margin-top: 20px;">
+					<form th:action="@{cadastrarfisica/salvar}" th:object="${cliente}" method="POST" autocomplete="off" id="fcadastro" style="margin-top: 20px;">
 						<div class="row mb-3">
 							<div class="col">
-								<input type="text" class="form-control required" name="nome"
+								<input type="text" class="form-control required" th:field="*{nome}" name="nome"
 									placeholder="Digite seu nome">
 							</div>
 							<div class="col">
-								<input type="text" class="form-control required email" name="email"
+								<input type="text" class="form-control required" th:field="*{sobrenome}" name="sobrenome"
 									placeholder="Digite seu sobrenome">
 								<!--Required 'Campo Obrigatório'-->
 							</div>
@@ -60,11 +60,11 @@
 
 						<div class="row mb-3">
 							<div class="col">
-								<input type="text" class="form-control required dateBR" name="data"
+								<input type="text" class="form-control required dateBR" th:field="*{data}" name="data"
 									placeholder="Data de Nascimento" id="data">
 							</div>
 							<div class="col">
-								<input type="text" class="form-control required cpf" name="cpf"
+								<input type="text" class="form-control required cpf" th:field="*{cpf}" name="cpf"
 									placeholder="Digite seu CPF" id="cpf">
 							</div>
 						</div>
@@ -75,12 +75,12 @@
 
 						<div class="row mb-3">
 							<div class="col-md-6 mt-2">
-								<input type="text" class="form-control required" name="cep" id="cep" placeholder="Cep"
+								<input type="text" class="form-control required" th:field="*{cep}" name="cep" id="cep" placeholder="Cep"
 									maxlength="8">
 							</div>
 
 							<div class="col-md-6 mt-2">
-								<input type="text" class="form-control required" name="logradouro" id="logradouro"
+								<input type="text" class="form-control required" th:field="*{rua}" name="logradouro" id="logradouro"
 									placeholder="Logradouro/Rua">
 							</div>
 						</div>
@@ -89,14 +89,14 @@
 						<div class="row mb-3">
 
 							<div class="col-md-4 mt-2">
-								<input type="text" class="form-control required" name="numero" id="numero"
+								<input type="text" class="form-control required" th:field="*{numero}" name="numero" id="numero"
 									placeholder="Número">
 							</div>
 							<div class="col-md-4 mt-2">
-								<input type="text" class="form-control" name="complemento" placeholder="Complemento">
+								<input type="text" class="form-control" name="complemento" th:field="*{complem}" placeholder="Complemento">
 							</div>
 							<div class="col-md-4 mt-2">
-								<input type="text" class="form-control required" name="bairro" id="bairro"
+								<input type="text" class="form-control required" th:field="*{bairro}" name="bairro" id="bairro"
 									placeholder="Bairro">
 							</div>
 						</div>
@@ -104,14 +104,14 @@
 						<div class="row mb-3">
 
 							<div class="col-md-5 mt-2">
-								<input type="text" class="form-control required" name="cidade" id="cidade"
+								<input type="text" class="form-control required" th:field="*{cidade}" name="cidade" id="cidade"
 									placeholder="Cidade">
 							</div>
 							<div class="col-md-2 mt-2">
-								<input type="text" class="form-control required" name="uf" id="uf" placeholder="UF">
+								<input type="text" class="form-control required" th:field="*{estado}" name="uf" id="uf" placeholder="UF">
 							</div>
 							<div class="col-md-5 mt-2">
-								<input type="text" class="form-control required" name="nome" id="telefone"
+								<input type="text" class="form-control required" th:field="*{telefone}" name="nome" id="telefone"
 									placeholder="Telefone de Contato">
 							</div>
 						</div>
@@ -120,17 +120,17 @@
 						<div class="row mb-3">
 
 							<div class="col">
-								<input type="text" class="form-control required email" name="email"
+								<input type="text" class="form-control required email" th:field="*{email}" name="email"
 									placeholder="Digite seu email">
 							</div>
 						</div>
 
 						<div class="row mb-3">
 							<div class="col">
-								<input type="text" class="form-control required" name="nome" placeholder="Senha">
+								<input type="password" class="form-control required" th:field="*{senha}" name="nome" placeholder="Senha">
 							</div>
 							<div class="col">
-								<input type="text" class="form-control required email" name="email"
+								<input type="password" class="form-control required" name="senha"
 									placeholder="Confirme sua Senha">
 							</div>
 						</div>
@@ -172,7 +172,7 @@
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		crossorigin="anonymous"></script>
-	<script src="js/scripts.js"></script>
+	<script th:src="@{js/scripts.js}"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
 	<script src="assets/demo/chart-area-demo.js"></script>
 	<script src="assets/demo/chart-bar-demo.js"></script>

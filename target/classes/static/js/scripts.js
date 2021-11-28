@@ -62,3 +62,25 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
 		});
+		
+		/*function validarSenha(senha, senha1)
+{
+    var senha1 = document.getElementById(senha).value;
+    var senha2 = document.getElementById(senha1).value;
+		
+    if (senha1 != "" && senha2 != "" && senha1 === senha2)
+    {
+    	alert('senha iguais');
+    }
+    else
+    {
+      	alert('senhas diferentes');
+    }
+}
+
+
+	$("#senha1").change(function()
+	{
+	      validarSenha(param1,param2);
+	});
+*/

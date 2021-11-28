@@ -13,8 +13,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Entity
 public class Cliente implements Serializable {	
 	
-	private static final long serialVersionUID = 8403856230972502775L;
-
+	
+	private static final long serialVersionUID = 6806715928034596480L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
